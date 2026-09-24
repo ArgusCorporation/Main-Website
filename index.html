@@ -45,23 +45,6 @@
     font-size: 16px;
     line-height: 1.6;
     overflow-x: hidden;
-    cursor: crosshair;
-  }
-
-  /* SCANLINE OVERLAY */
-  body::before {
-    content: '';
-    position: fixed;
-    inset: 0;
-    background: repeating-linear-gradient(
-      0deg,
-      transparent,
-      transparent 2px,
-      rgba(0,0,0,0.08) 2px,
-      rgba(0,0,0,0.08) 4px
-    );
-    pointer-events: none;
-    z-index: 9998;
   }
 
   /* VIGNETTE */
@@ -387,43 +370,6 @@
 
   .hero-title .glitch-text {
     position: relative;
-  }
-
-  .hero-title .glitch-text::before,
-  .hero-title .glitch-text::after {
-    content: attr(data-text);
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%;
-    height: 100%;
-  }
-
-  .hero-title .glitch-text::before {
-    color: var(--cyan);
-    animation: glitch-1 3.5s infinite;
-    clip-path: polygon(0 30%, 100% 30%, 100% 50%, 0 50%);
-    opacity: 0;
-  }
-
-  .hero-title .glitch-text::after {
-    color: var(--red);
-    animation: glitch-2 3.5s infinite;
-    clip-path: polygon(0 55%, 100% 55%, 100% 75%, 0 75%);
-    opacity: 0;
-  }
-
-  @keyframes glitch-1 {
-    0%, 92%, 96%, 100% { transform: translate(0); opacity: 0; }
-    93% { transform: translate(-3px, 1px); opacity: 0.8; }
-    94% { transform: translate(2px, -1px); opacity: 0.6; }
-    95% { transform: translate(-1px, 2px); opacity: 0.9; }
-  }
-
-  @keyframes glitch-2 {
-    0%, 92%, 96%, 100% { transform: translate(0); opacity: 0; }
-    93% { transform: translate(3px, -1px); opacity: 0.7; }
-    94% { transform: translate(-2px, 1px); opacity: 0.5; }
-    95% { transform: translate(1px, -2px); opacity: 0.8; }
   }
 
   .hero-slogan {
@@ -1486,7 +1432,7 @@
 </head>
 <body>
 
-<!-- MATRIX CANVAS -->
+<!-- BACKGROUND NETWORK CANVAS -->
 <canvas id="matrix-canvas"></canvas>
 
 <!-- NAV -->
@@ -1529,8 +1475,8 @@
   </div>
   <div class="status-ticker">
     <span class="status-ticker-inner">
-      &nbsp;&nbsp;&nbsp;// ÜBERWACHUNGSNETZ AKTIV: 247 LÄNDER // DATENANALYSE-NODES: 4.821 // KI-PROZESSE: 194.338 // LETZTE KALIBRIERUNG: 00:00:04 //&nbsp;&nbsp;&nbsp;
-      AKTIVE NUTZERPROFILE: 2.847.331.027 // ECHTZEIT-SCANS: 19.2M/SEC // ANOMALIEERKENNUNG: BEREIT //
+      &nbsp;&nbsp;&nbsp;// ÜBERWACHUNGSNETZ AKTIV: 64 LÄNDER // DATENANALYSE-NODES: 1.842 // KI-PROZESSE: 3.412 // LETZTE KALIBRIERUNG: VOR 4 MIN //&nbsp;&nbsp;&nbsp;
+      AKTIVE NUTZERPROFILE: 48.221.904 // ECHTZEIT-SCANS: 84K/SEC // ANOMALIEERKENNUNG: BEREIT //
     </span>
   </div>
 </div>
@@ -1565,19 +1511,19 @@
 
   <div class="hero-stats">
     <div class="stat-item">
-      <span class="stat-val" id="counter-nodes">4,821</span>
+      <span class="stat-val" id="counter-nodes">1,842</span>
       <span class="stat-label">GLOBALE NODES</span>
     </div>
     <div class="stat-item">
-      <span class="stat-val">247</span>
+      <span class="stat-val">64</span>
       <span class="stat-label">LÄNDER ÜBERWACHT</span>
     </div>
     <div class="stat-item">
-      <span class="stat-val">99.97%</span>
+      <span class="stat-val">99.95%</span>
       <span class="stat-label">VERFÜGBARKEIT</span>
     </div>
     <div class="stat-item">
-      <span class="stat-val">19.2M</span>
+      <span class="stat-val">84K</span>
       <span class="stat-label">SCANS / SEK</span>
     </div>
   </div>
@@ -1597,31 +1543,31 @@
         <div class="section-label">ÜBER ARGUS</div>
         <h2 class="section-title">Die Architektur<br>der <em>totalen Sicherheit</em></h2>
         <p>
-          <strong>ARGUS</strong> ist die weltweit führende Organisation für KI-gestützte Überwachung, Sicherheitsinfrastruktur und Datenanalyse. Gegründet im Nachklang der ersten vollimmersiven Virtual-Reality-Netzwerke, sichern wir heute kritische digitale und physische Infrastrukturen in 247 Ländern.
+          <strong>ARGUS</strong> ist eine international tätige Organisation für KI-gestützte Überwachung, Sicherheitsinfrastruktur und Datenanalyse. Gegründet im Zuge der ersten großflächigen Cyberangriffe auf kritische Infrastruktur, sichern wir heute Anlagen und Netzwerke von Behörden und Konzernen in 64 Ländern.
         </p>
         <p>
-          Unsere proprietäre KI-Engine analysiert <strong>19.2 Millionen Datenpunkte pro Sekunde</strong>, erkennt Bedrohungen in Echtzeit und neutralisiert Risiken, bevor sie zu Vorfällen werden. ARGUS ist nicht reaktiv – wir sind präventiv.
+          Unsere proprietäre KI-Engine verarbeitet <strong>über 84.000 Datenpunkte pro Sekunde</strong>, erkennt Auffälligkeiten in Echtzeit und verkürzt die Reaktionszeit auf Sicherheitsvorfälle erheblich. ARGUS arbeitet vorausschauend – nicht erst, wenn der Schaden entstanden ist.
         </p>
         <p>
-          Von der Überwachung physischer Sicherheitsräume bis zur Integrität vollständiger virtueller Welten: Wo Daten fließen, sieht ARGUS alles.
+          Von der Überwachung physischer Sicherheitsräume bis zur Absicherung digitaler Infrastruktur: Wo sicherheitsrelevante Daten anfallen, unterstützt ARGUS bei der Auswertung.
         </p>
       </div>
 
       <div class="about-metrics">
         <div class="metric-cell">
-          <span class="metric-num">2.8B+</span>
+          <span class="metric-num">48M+</span>
           <span class="metric-desc">ÜBERWACHTE NUTZERPROFILE</span>
         </div>
         <div class="metric-cell">
-          <span class="metric-num">194K</span>
+          <span class="metric-num">3.400</span>
           <span class="metric-desc">PARALLELE KI-PROZESSE</span>
         </div>
         <div class="metric-cell">
-          <span class="metric-num">&lt;0.3ms</span>
-          <span class="metric-desc">REAKTIONSLATENZ</span>
+          <span class="metric-num">&lt;4 Min</span>
+          <span class="metric-desc">REAKTIONSZEIT</span>
         </div>
         <div class="metric-cell">
-          <span class="metric-num">Ø 99.97%</span>
+          <span class="metric-num">Ø 99.95%</span>
           <span class="metric-desc">SYSTEMVERFÜGBARKEIT</span>
         </div>
         <div class="metric-cell">
@@ -1629,7 +1575,7 @@
           <span class="metric-desc">GLOBALE RECHENZENTREN</span>
         </div>
         <div class="metric-cell">
-          <span class="metric-num">3 ExaB</span>
+          <span class="metric-num">40 PB</span>
           <span class="metric-desc">ERFASSTE DATENMENGE / TAG</span>
         </div>
       </div>
@@ -1657,7 +1603,7 @@
           <line x1="32" y1="24" x2="40" y2="24" stroke="#00d4ff" stroke-width="1" opacity="0.5"/>
         </svg>
         <div class="tech-card-title">KI-ÜBERWACHUNGSSYSTEME</div>
-        <p class="tech-card-desc">Neuronale Netze der 7. Generation für die kontinuierliche, automatisierte Analyse von Videodaten, Kommunikationsströmen und Verhaltensprofilen in Echtzeit.</p>
+        <p class="tech-card-desc">Neuronale Netze für die kontinuierliche, automatisierte Analyse von Videodaten, Kommunikationsströmen und Verhaltensprofilen in Echtzeit.</p>
         <span class="tech-tag">ARGUS-NEURAL v7.4</span>
       </div>
 
@@ -1671,7 +1617,7 @@
           <circle cx="12" cy="30" r="2" fill="#00d4ff" opacity="0.6"/>
         </svg>
         <div class="tech-card-title">VR-WELTEN INTEGRATION</div>
-        <p class="tech-card-desc">Nahtlose Sicherheitsüberwachung innerhalb vollständiger virtueller Umgebungen. ARGUS operiert in allen registrierten Full-Dive-VR-Netzwerken mit Zugriff auf Nutzerverhaltensdaten.</p>
+        <p class="tech-card-desc">Sicherheitsüberwachung innerhalb angebundener VR- und Mixed-Reality-Plattformen. ARGUS integriert sich in gängige Unternehmens-VR-Umgebungen mit Zugriff auf Sitzungs- und Nutzungsdaten.</p>
         <span class="tech-tag">VR-GUARD PROTOCOL 3.1</span>
       </div>
 
@@ -1689,7 +1635,7 @@
           <line x1="24" y1="34" x2="24" y2="44" stroke="#00d4ff" stroke-width="1" opacity="0.3"/>
         </svg>
         <div class="tech-card-title">NEURAL NETWORK SECURITY</div>
-        <p class="tech-card-desc">Adaptive Sicherheitsarchitektur, die sich in Echtzeit an neue Angriffsmuster anpasst. Selbstlernende Abwehrsysteme mit über 847 Mio. klassifizierten Bedrohungsmustern.</p>
+        <p class="tech-card-desc">Adaptive Sicherheitsarchitektur, die sich fortlaufend an neue Angriffsmuster anpasst. Selbstlernende Abwehrsysteme mit über 12 Mio. klassifizierten Bedrohungsmustern.</p>
         <span class="tech-tag">ADAPTIVE-SHIELD MK.IV</span>
       </div>
 
@@ -1703,7 +1649,7 @@
           <line x1="6" y1="10" x2="6" y2="38" stroke="#00d4ff" stroke-width="0.5" opacity="0.2"/>
         </svg>
         <div class="tech-card-title">ECHTZEIT-DATENANALYSE</div>
-        <p class="tech-card-desc">Verteilte Stream-Processing-Architektur für die simultane Analyse von Petabytes an Daten. Prädiktive Modelle erkennen Anomalien durchschnittlich 4.7 Minuten vor dem Ereignis.</p>
+        <p class="tech-card-desc">Verteilte Stream-Processing-Architektur für die simultane Analyse großer Datenmengen. Prädiktive Modelle erkennen Anomalien im Schnitt 4,7 Sekunden nach Auftreten.</p>
         <span class="tech-tag">STREAM-CORE 9.0</span>
       </div>
     </div>
@@ -1744,12 +1690,12 @@
           </svg>
           <h3>ARGUS CORE AI</h3>
           <div class="product-version">SYSTEM AKTIV // BUILD 7.4.2-RELEASE</div>
-          <p>Das Herzstück der ARGUS-Infrastruktur. ARGUS Core AI ist ein hyperparalleles neuronales Netzwerk mit über 2.4 Billionen Parametern, das als zentrales Entscheidungsorgan aller ARGUS-Subsysteme fungiert. Es verarbeitet, priorisiert und orchestriert alle eingehenden Bedrohungsdaten in Echtzeit.</p>
+          <p>Das Herzstück der ARGUS-Infrastruktur. ARGUS Core AI ist ein hyperparalleles neuronales Netzwerk mit über 500 Milliarden Parametern, das als zentrales Entscheidungsorgan aller ARGUS-Subsysteme fungiert. Es verarbeitet, priorisiert und orchestriert alle eingehenden Sicherheitsdaten in Echtzeit.</p>
           <ul class="feature-list">
             <li>Hyperparallele Verarbeitung</li>
             <li>Selbstlernende Bedrohungsmodelle</li>
-            <li>Quantenkryptografische Isolation</li>
-            <li>Zero-Latency Decision Engine</li>
+            <li>Post-Quanten-Kryptografie</li>
+            <li>Niedriglatenz-Entscheidungs-Engine</li>
             <li>Autonome Eskalationsprotokoll</li>
             <li>Multi-Domain Awareness</li>
             <li>Biometrische Nutzeranalyse</li>
@@ -1768,10 +1714,10 @@
             <circle cx="70" cy="100" r="5" fill="#ff1a35" opacity="0.8"/>
           </svg>
           <h3>ARGUS SURVEILLANCE GRID</h3>
-          <div class="product-version">SYSTEM AKTIV // COVERAGE: 247 NATIONS</div>
-          <p>Das ARGUS Surveillance Grid ist ein globales, verteiltes Überwachungsnetzwerk aus 4.821 Überwachungsknoten in 247 Ländern. Es integriert Satellitendaten, städtische Kameranetzwerke, digitale Kommunikationskanäle und IoT-Sensoren zu einem einzigen kohärenten Lagebild.</p>
+          <div class="product-version">SYSTEM AKTIV // COVERAGE: 64 NATIONS</div>
+          <p>Das ARGUS Surveillance Grid ist ein global verteiltes Überwachungsnetzwerk aus 1.842 Überwachungsknoten in 64 Ländern. Es integriert Satellitendaten, städtische Kameranetzwerke, digitale Kommunikationskanäle und IoT-Sensoren zu einem einzigen kohärenten Lagebild.</p>
           <ul class="feature-list">
-            <li>4.821 globale Datenpunkte</li>
+            <li>1.842 globale Datenpunkte</li>
             <li>Satelliten-Integration</li>
             <li>Smart-City Kameranetz</li>
             <li>IoT-Sensor-Aggregation</li>
@@ -1792,13 +1738,13 @@
           </svg>
           <h3>ARGUS VR MONITORING SUITE</h3>
           <div class="product-version">SYSTEM AKTIV // VR-NODES: 12 VERBUNDEN</div>
-          <p>Die einzige Sicherheitslösung, die vollständig innerhalb virtueller Full-Dive-Umgebungen operiert. ARGUS VR überwacht Nutzerverhalten, identifiziert Anomalien in Spielerdaten und erkennt Missbrauch innerhalb registrierter VR-Weltnetzwerke, inklusive kardiovaskulärer und neurologischer Stresssignale.</p>
+          <p>Eine Sicherheitslösung für Unternehmen, die VR- und Mixed-Reality-Plattformen betreiben. ARGUS VR überwacht Nutzerverhalten, identifiziert Anomalien in Sitzungsdaten und erkennt Missbrauch über angebundene Headsets hinweg, inklusive Bewegungs- und Biofeedback-Daten kompatibler Wearables.</p>
           <ul class="feature-list">
-            <li>Full-Dive Überwachung</li>
-            <li>Neuronale Signalanalyse</li>
+            <li>XR-Sitzungsüberwachung</li>
+            <li>Biofeedback-Signalanalyse</li>
             <li>VR-Verhaltensprofile</li>
-            <li>Anti-NerveGear Exploit</li>
-            <li>AmuSphere Kompatibilität</li>
+            <li>Anti-Spoofing-Schutz</li>
+            <li>Headset-Telemetrie-Integration</li>
             <li>Biofeedback-Integration</li>
             <li>Identity Verification</li>
             <li>Emergency Disconnect</li>
@@ -1912,7 +1858,7 @@
             <div class="sidebar-title">// ECHTZEIT-STATISTIKEN</div>
             <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem">
               <div>
-                <div style="font-family:var(--font-display);font-size:1.2rem;font-weight:700;color:var(--cyan);text-shadow:0 0 12px var(--cyan-glow)" id="scan-counter">19.2M</div>
+                <div style="font-family:var(--font-display);font-size:1.2rem;font-weight:700;color:var(--cyan);text-shadow:0 0 12px var(--cyan-glow)" id="scan-counter">84K</div>
                 <div style="font-family:var(--font-mono);font-size:0.5rem;color:var(--text-dim);letter-spacing:0.1em;margin-top:4px">SCANS/SEK</div>
               </div>
               <div>
@@ -1920,11 +1866,11 @@
                 <div style="font-family:var(--font-mono);font-size:0.5rem;color:var(--text-dim);letter-spacing:0.1em;margin-top:4px">THREATS AKTIV</div>
               </div>
               <div>
-                <div style="font-family:var(--font-display);font-size:1.2rem;font-weight:700;color:var(--cyan)" id="node-counter">4821</div>
+                <div style="font-family:var(--font-display);font-size:1.2rem;font-weight:700;color:var(--cyan)" id="node-counter">1842</div>
                 <div style="font-family:var(--font-mono);font-size:0.5rem;color:var(--text-dim);letter-spacing:0.1em;margin-top:4px">NODES ONLINE</div>
               </div>
               <div>
-                <div style="font-family:var(--font-display);font-size:1.2rem;font-weight:700;color:#00ff88">99.97%</div>
+                <div style="font-family:var(--font-display);font-size:1.2rem;font-weight:700;color:#00ff88">99.95%</div>
                 <div style="font-family:var(--font-mono);font-size:0.5rem;color:var(--text-dim);letter-spacing:0.1em;margin-top:4px">UPTIME</div>
               </div>
             </div>
@@ -2008,7 +1954,7 @@
       <li><a href="#">Karriere</a></li>
       <li><a href="#">Impressum</a></li>
     </ul>
-    <div class="footer-copyright">©20XX ARGUS ISG // ALLE RECHTE VORBEHALTEN // LEVEL-5 CLASSIFIED</div>
+    <div class="footer-copyright">©2026 ARGUS ISG // ALLE RECHTE VORBEHALTEN // LEVEL-5 CLASSIFIED</div>
   </div>
 </footer>
 
@@ -2023,7 +1969,7 @@
   'use strict';
 
   // ========================
-  // MATRIX / DATA STREAM CANVAS
+  // BACKGROUND NETWORK CANVAS
   // ========================
   const canvas = document.getElementById('matrix-canvas');
   const ctx = canvas.getContext('2d');
@@ -2035,49 +1981,52 @@
   resizeCanvas();
   window.addEventListener('resize', resizeCanvas);
 
-  const chars = '01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホ#$%&*+/<=>?@[]^_{|}~'.split('');
-  const fontSize = 11;
-  let columns = Math.floor(canvas.width / fontSize);
-  const drops = [];
+  const bgParticles = [];
+  const particleCount = 70;
 
-  for (let i = 0; i < columns; i++) {
-    drops[i] = Math.random() * -100;
+  for (let i = 0; i < particleCount; i++) {
+    bgParticles.push({
+      x: Math.random() * canvas.width,
+      y: Math.random() * canvas.height,
+      vx: (Math.random() - 0.5) * 0.15,
+      vy: (Math.random() - 0.5) * 0.15,
+    });
   }
 
-  function drawMatrix() {
-    columns = Math.floor(canvas.width / fontSize);
-    while (drops.length < columns) drops.push(Math.random() * -100);
+  function drawNetwork() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-    ctx.fillStyle = 'rgba(2, 5, 8, 0.05)';
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    bgParticles.forEach(p => {
+      p.x += p.vx;
+      p.y += p.vy;
+      if (p.x < 0 || p.x > canvas.width) p.vx *= -1;
+      if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
+    });
 
-    for (let i = 0; i < columns; i++) {
-      const char = chars[Math.floor(Math.random() * chars.length)];
-      const y = drops[i] * fontSize;
-
-      // Random color: mostly cyan-dark, occasionally bright cyan or red
-      const r = Math.random();
-      if (r > 0.998) {
-        ctx.fillStyle = '#ff1a35';
-        ctx.font = `bold ${fontSize}px 'Share Tech Mono', monospace`;
-      } else if (r > 0.96) {
-        ctx.fillStyle = '#00d4ff';
-        ctx.font = `bold ${fontSize}px 'Share Tech Mono', monospace`;
-      } else if (r > 0.8) {
-        ctx.fillStyle = 'rgba(0, 150, 180, 0.5)';
-        ctx.font = `${fontSize}px 'Share Tech Mono', monospace`;
-      } else {
-        ctx.fillStyle = 'rgba(0, 80, 100, 0.25)';
-        ctx.font = `${fontSize}px 'Share Tech Mono', monospace`;
+    for (let i = 0; i < bgParticles.length; i++) {
+      for (let j = i + 1; j < bgParticles.length; j++) {
+        const a = bgParticles[i], b = bgParticles[j];
+        const dist = Math.hypot(a.x - b.x, a.y - b.y);
+        if (dist < 160) {
+          ctx.strokeStyle = `rgba(0,212,255,${0.12 * (1 - dist / 160)})`;
+          ctx.lineWidth = 0.6;
+          ctx.beginPath();
+          ctx.moveTo(a.x, a.y);
+          ctx.lineTo(b.x, b.y);
+          ctx.stroke();
+        }
       }
-
-      ctx.fillText(char, i * fontSize, y);
-      drops[i]++;
-      if (y > canvas.height && Math.random() > 0.975) drops[i] = 0;
     }
+
+    bgParticles.forEach(p => {
+      ctx.fillStyle = 'rgba(0,212,255,0.35)';
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, 1.4, 0, Math.PI * 2);
+      ctx.fill();
+    });
   }
 
-  setInterval(drawMatrix, 50);
+  setInterval(drawNetwork, 50);
 
   // ========================
   // WORLD MAP CANVAS
@@ -2291,9 +2240,9 @@
 
   const toastMessages = [
     'Neuer Datenpunkt erfasst: NODE-447 TOKIO meldet kritische Anomalie.',
-    'KI-Analyse: 14.3M neue Nutzeraktivitäten in den letzten 60 Sekunden verarbeitet.',
+    'KI-Analyse: 62.000 neue Nutzeraktivitäten in den letzten 60 Sekunden verarbeitet.',
     'Sicherheitsprotokoll THETA-7 eingeleitet. Bedrohung in Sektor 9 unter Beobachtung.',
-    'VR-MONITOR: 847 neue Full-Dive-Sitzungen überwacht. Keine Anomalien.',
+    'VR-MONITOR: 847 neue XR-Sitzungen überwacht. Keine Anomalien.',
     'ARGUS CORE AI: Selbstoptimierung abgeschlossen. Genauigkeit: +0.003%.',
   ];
 
@@ -2317,15 +2266,15 @@
   const scanEl = document.getElementById('scan-counter');
   if (scanEl) {
     setInterval(() => {
-      const v = (18 + Math.random() * 2.5).toFixed(1);
-      scanEl.textContent = v + 'M';
+      const v = Math.round(78 + Math.random() * 12);
+      scanEl.textContent = v + 'K';
     }, 1800);
   }
 
   const nodeEl = document.getElementById('node-counter');
   if (nodeEl) {
     setInterval(() => {
-      const v = 4800 + Math.floor(Math.random() * 40);
+      const v = 1800 + Math.floor(Math.random() * 90);
       nodeEl.textContent = v.toLocaleString('de-DE');
     }, 3000);
   }
@@ -2371,47 +2320,6 @@
     el.style.transform = 'translateY(20px)';
     el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
     observer.observe(el);
-  });
-
-  // ========================
-  // CURSOR EFFECT
-  // ========================
-  const cursorDot = document.createElement('div');
-  cursorDot.style.cssText = `
-    position: fixed; width: 6px; height: 6px; border-radius: 50%;
-    background: rgba(0,212,255,0.8); pointer-events: none; z-index: 99999;
-    transform: translate(-50%,-50%); box-shadow: 0 0 10px rgba(0,212,255,0.6);
-    transition: transform 0.1s, background 0.3s;
-  `;
-  const cursorRing = document.createElement('div');
-  cursorRing.style.cssText = `
-    position: fixed; width: 28px; height: 28px; border-radius: 50%;
-    border: 1px solid rgba(0,212,255,0.4); pointer-events: none; z-index: 99998;
-    transform: translate(-50%,-50%); transition: all 0.12s ease;
-  `;
-  document.body.appendChild(cursorDot);
-  document.body.appendChild(cursorRing);
-
-  let mx = -100, my = -100;
-  document.addEventListener('mousemove', e => {
-    mx = e.clientX; my = e.clientY;
-    cursorDot.style.left = mx + 'px';
-    cursorDot.style.top = my + 'px';
-    cursorRing.style.left = mx + 'px';
-    cursorRing.style.top = my + 'px';
-  });
-
-  document.querySelectorAll('a, button, .product-tab, .ctrl-btn').forEach(el => {
-    el.addEventListener('mouseenter', () => {
-      cursorRing.style.width = '48px';
-      cursorRing.style.height = '48px';
-      cursorRing.style.borderColor = 'rgba(0,212,255,0.7)';
-    });
-    el.addEventListener('mouseleave', () => {
-      cursorRing.style.width = '28px';
-      cursorRing.style.height = '28px';
-      cursorRing.style.borderColor = 'rgba(0,212,255,0.4)';
-    });
   });
 
 })();
